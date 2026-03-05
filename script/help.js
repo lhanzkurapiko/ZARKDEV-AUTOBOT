@@ -59,7 +59,7 @@ module.exports.run = async function({ api, event, enableCommands, args, Utils, p
 ╚════════════╝\n\n`);
 
       for (let i = start; i < end; i++) {   
-        helpMessage += formatFont(`➬${prefix}${commands[i]}\n`);
+        helpMessage += formatFont(`╰─➤${prefix}${commands[i]}\n`);
       }
 
       helpMessage += formatFont(`\n𝙴𝚅𝙴𝙽𝚃 𝙻𝙸𝚂𝚃:\n\n`);
