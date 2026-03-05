@@ -2,7 +2,7 @@ const fs = require("fs");
 
 module.exports = {
     name: "report",
-    usePrefix: false,
+    usePrefix: true,
     description: "Send a message to the bot owner.",
     usage: "report <your message>",
     version: "1.2",
@@ -17,7 +17,7 @@ module.exports = {
         let ownerUID = null;
         try {
             const appState = JSON.parse(fs.readFileSync("appState.json", "utf8"));
-            ownerUID = appState.ownerUid || "100030880666720";
+            ownerUID = appState.ownerUid || "61585233555488";
         } catch (e) {
             return api.sendMessage("❌ Failed to load the owner's UID from appState.json.", threadID);
         }
