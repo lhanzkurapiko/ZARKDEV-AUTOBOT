@@ -6,8 +6,8 @@ module.exports.config = {
   name: "spotify",
   version: "1.0.0",
   role: 0,
-  hasPrefix: false,
-  aliases: [],
+  hasPrefix: true,
+  aliases: ['song'],
   description: "Search and download Spotify track.",
   usage: "spotify [song name]",
   credits: "Vern",
@@ -53,7 +53,7 @@ module.exports.run = async function ({ api, event, args }) {
 
     // Send image with details
     api.sendMessage({
-      body: `🎵 Title: ${title}\n👤 Artist: ${artist}`,
+      body: `════『𝗦𝗣𝗢𝗧𝗜𝗙𝗬』════/n🎵 Title: ${title}\n👤 Artist: ${artist}/n═══════════════`,
       attachment: fs.createReadStream(imgPath)
     }, threadID, () => {
       // Then send the audio
