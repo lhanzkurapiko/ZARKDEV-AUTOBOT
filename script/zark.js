@@ -49,13 +49,13 @@ module.exports.run = async function ({ api, event, args }) {
         const timePH = new Date(Date.now() + 8 * 60 * 60 * 1000).toLocaleString('en-US', { hour12: false });
 
         const replyMessage = `
-🤖 𝗟𝗛𝗔𝗡𝗭 𝗔𝗜
-━━━━━━━━━━━━━━━━━━
+════『𝗟𝗛𝗔𝗡𝗭 𝗔𝗜』════
+
 ${responseText.trim()}
-━━━━━━━━━━━━━━━━━━
+══════════════════
 🗣 𝗔𝘀𝗸𝗲𝗱 𝗕𝘆: ${userName}
 ⏰ 𝗧𝗶𝗺𝗲: ${timePH}`.trim();
-
+👑 Developer: 𝗟𝗵𝗮𝗻𝘇 𝗟𝗮𝘂𝗿𝗲𝗻𝘁
         api.editMessage(formatFont(replyMessage), info.messageID);
       });
 
